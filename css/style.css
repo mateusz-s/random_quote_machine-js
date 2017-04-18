@@ -1,0 +1,90 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fira Sans', sans-serif;
+    /background-color: #E2FFFF;
+}
+
+main {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 54px;
+    line-height: 72px;
+    margin-top: 0;
+    margin-bottom: 72px;
+    text-align: center;
+}
+
+.box {
+    padding-left: 60px;
+    padding-right: 20px;
+    border-right: 10px solid #0084B4;
+    position: relative;
+}
+
+.box:before {
+    font-family: 'FontAwesome';
+    font-size: 24px;
+    content: '\f10d';
+    position: absolute;
+    top: 0;
+    left: 19px;
+    color: #0084B4;
+}
+
+.box .quote {
+    min-height: 196px;
+    font-size: 36px;
+    line-height: 48px;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.box .quote:first-letter {
+    font-size: 48px;
+    color: #0084B4;
+}
+
+.box .author {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 24px;
+    text-align: right;
+}
+
+.box-btn {
+    text-align: center;
+}
+
+.box-btn .trigger {
+    padding: 10px 50px;
+    border: 2px solid;
+    border-radius: 5px;
+    margin: 50px 0;
+    color: #0084B4;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.box-btn .tweet {
+    display: block;
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    background-color: #0084B4;
+    text-decoration: none;
+}
+
+.box-btn .tweet i.fa {
+    margin-right: 10px;
+}
