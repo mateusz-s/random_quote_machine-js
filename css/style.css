@@ -70,6 +70,7 @@ button, button:focus {
     display: block;
     float: left;
     width: 96px;
+    border-radius: 5px;
     margin-right: 10px;
     color: #FFFFFF;
     background-color: #0084B4;
