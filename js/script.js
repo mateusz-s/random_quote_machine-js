@@ -28,7 +28,12 @@ function createTweet(input) {
 
 $(document).ready(function () {
     getQuote();
+    
     $('.trigger').click(function () {
         getQuote();
+    });
+    
+    $('.quote').html(function (index, html) {
+        return '<span class="quote-first-letter">' + html.slice(0, 1) + '</span>' + html.slice(1);
     });
 });
