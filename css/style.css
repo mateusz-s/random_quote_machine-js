@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -6,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Fira Sans', sans-serif;
-    /background-color: #E2FFFF;
+    background-image: url('../img/creampaper.png');
 }
 
 main {
@@ -23,6 +27,10 @@ h1 {
     text-align: center;
 }
 
+button, button:focus {
+    outline: none;
+}
+
 .box {
     display: flex;
     flex-direction: column;
@@ -36,11 +44,12 @@ h1 {
 
 .box:before {
     font-family: 'FontAwesome';
-    font-size: 24px;
+    font-size: 36px;
     content: '\f10d';
     position: absolute;
     top: 0;
-    left: 19px;
+    left: 30px;
+    transform: translate(-50%,-50%);
     color: #0084B4;
 }
 
@@ -50,9 +59,23 @@ h1 {
     line-height: 48px;
 }
 
+/*
 .box .quote:first-letter {
     font-size: 48px;
     color: #0084B4;
+}
+*/
+
+.box .quote-first-letter {
+    display: block;
+    float: left;
+    width: 96px;
+    margin-right: 10px;
+    color: #FFFFFF;
+    background-color: #0084B4;
+    font-size: 48px;
+    line-height: 96px;
+    text-align: center;
 }
 
 .box .author {
@@ -77,15 +100,31 @@ h1 {
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
+    transition: all .3s;
+}
+
+.box-btn .trigger:hover {
+    border: 2px solid transparent;
+    color: #FFFFFF;
+    background-color: #0084B4;
 }
 
 .box-btn .tweet {
     display: block;
     padding: 10px 30px;
+    border: 2px solid transparent;
     border-radius: 5px;
     color: #FFFFFF;
     background-color: #0084B4;
     text-decoration: none;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.box-btn .tweet:hover {
+    color: #0084B4;
+    background-color: transparent;
+    border: 2px solid;
 }
 
 .box-btn .tweet i.fa {
