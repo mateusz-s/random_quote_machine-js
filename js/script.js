@@ -20,8 +20,10 @@ function createTweet(input) {
         getQuote();
     } else {
         var tweet = tweetLink + encodeURIComponent(tweetText);
-        $('.quote').text(quoteText);
-        $('.author').text('Author: ' + quoteAuthor);
+        $('.quote').text(quoteText).html(function (index, html) {
+            return html.replace(/^[^a-zA-Z]*([a-zA-Z])/g, '<span class="quote-first-letter">$1</span>');
+        });
+        $('.author').html('&mdash; ' + quoteAuthor); //text('Author: ')
         $('.tweet').attr('href', tweet);
     }
 }
@@ -31,13 +33,5 @@ $(document).ready(function () {
     
     $('.trigger').click(function () {
         getQuote();
-    });
-    
-//    $('.quote').html(function (index, html) {
-//        return '<span class="quote-first-letter">' + html.slice(0, 1) + '</span>' + html.slice(1);
-//    });
-    
-    $('.quote').html(function (i, html) {
-        return html.replace(/^[^a-zA-Z]*([a-zA-Z])/g, '<span class="quote-first-letter">$1</span>');
     });
 });
