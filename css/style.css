@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 50%;
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -20,8 +24,8 @@ main {
 }
 
 h1 {
-    font-size: 54px;
-    line-height: 72px;
+    font-size: 5.4rem;
+    line-height: 7.2rem;
     margin-top: 0;
     margin-bottom: 80px;
     text-align: center;
@@ -35,8 +39,8 @@ button, button:focus {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 250px;
-    padding-left: 60px;
+    min-height: 250px;
+    padding-left: 2.5078rem;
     padding-right: 20px;
     border-right: 10px solid #0084B4;
     position: relative;
@@ -44,24 +48,25 @@ button, button:focus {
 
 .box:before {
     font-family: 'FontAwesome';
-    font-size: 36px;
+    font-size: 5.4rem;
     content: '\f10d';
     position: absolute;
     top: 0;
-    left: 30px;
+    left: 2.5078rem;
     transform: translate(-50%,-50%);
-    color: #0084B4;
+    color: #FFF;
+    text-shadow: 0 0 5px #999999;
 }
 
 .box .quote {
     margin: 0;
-    font-size: 36px;
-    line-height: 48px;
+    font-size: 3.6rem;
+    line-height: 4.8rem;
 }
 
 /*
 .box .quote:first-letter {
-    font-size: 48px;
+    font-size: 4.8rem;
     color: #0084B4;
 }
 */
@@ -69,21 +74,22 @@ button, button:focus {
 .box .quote-first-letter {
     display: block;
     float: left;
-    width: 96px;
+    width: 9.6rem;
     border-radius: 5px;
     margin-right: 10px;
     color: #FFFFFF;
     background-color: #0084B4;
-    font-size: 48px;
-    line-height: 96px;
+    font-size: 4.8rem;
+    line-height: 9.6rem;
     text-align: center;
 }
 
 .box .author {
     margin: 0;
-    font-size: 24px;
+    margin-top: 20px;
+    font-size: 2.4rem;
     font-weight: normal;
-    line-height: 24px;
+    line-height: 2.4rem;
     text-align: right;
 }
 
@@ -98,7 +104,7 @@ button, button:focus {
     margin: 50px 0;
     color: #0084B4;
     background-color: transparent;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: bold;
     cursor: pointer;
     transition: all .3s;
@@ -115,6 +121,7 @@ button, button:focus {
     padding: 10px 30px;
     border: 2px solid transparent;
     border-radius: 5px;
+    font-size: 1.6rem;
     color: #FFFFFF;
     background-color: #0084B4;
     text-decoration: none;
@@ -130,4 +137,10 @@ button, button:focus {
 
 .box-btn .tweet i.fa {
     margin-right: 10px;
+}
+
+@media (min-width: 600px) {
+    html {
+        font-size: 62.5%;
+    }
 }
